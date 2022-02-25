@@ -107,6 +107,7 @@ header .container nav{
 header .container nav .toggle-menu{
     color: white;
     font-size: 20px;
+    display: none;
 }
 header .container nav .toggle-menu:hover{
     padding-right: 25px;
@@ -123,6 +124,7 @@ header .container nav .toggle-menu:hover + ul{
     top: 100px;
     left: 0px;
     z-index: 3;
+    background-color: #00000050;
 }
 header .container nav .toggle-menu:hover + ul li{
     display: block;
@@ -590,16 +592,613 @@ line-height: 50px;
 }
 /* end about */
 /* start skills */
+.skills{
+    display: flex;
+    flex-direction: row;
+    margin: 100px 0px;
+    /* padding: 0px; */
+}
+.skills > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 500px; */
+    margin-bottom: 30px;
+    padding-left:50px;
+}
+.skills div .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.skills div .title h3{
+    text-transform:uppercase;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+.skills > div > .title p{
+    color: #777777;
+    text-align: center;
+    line-height: 35px;
+}
+.skills .test-section .profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+.skills .test-section .profile .img-box{
+    height:100%;
+    width:70%;
+    margin-right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.skills .test-section .profile .img-box .img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    padding-top: 100%;
+    width: 100%;
+}
+.skills .test-section .profile:nth-child(2) .img-box .img{
+    background-image: url(../images/skills-01.jpg);
+}
+.skills .test-section .profile:nth-child(3) .img-box .img{
+    background-image: url(../images/skills-02.jpg);
+}
+.skills .test-section .profile .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* padding: 0px 40px; */
+}
+.skills .test-section .profile .info::after{
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    height: 1px;
+    width: 100%;
+    background-color: #cccccc;
+    transform: translateX(-50%);
+}
+.skills .test-section .profile .info p{
+    line-height: 30px;
+}
+.skills .test-section .profile .info h4{
+    color: #777777;
+    font-weight: 400;
+    font-size: 14px;
+    align-self: flex-end;
+}
+.skills .test-section .circles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+.skills .test-section .circles .circle{
+    height: 15px;
+    width: 15px;
+    border: #777777 1px solid;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.skills .test-section .circles .active{
+    background-color: var(--mainColor);
+    border: none;
+}
+.skills .skill-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+} 
+.skills .skill-section .softwares{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    align-self: flex-start;
+    width: 100%;
+
+}
+.skills .skill-section .softwares .software{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+.skills .skill-section .softwares .software .name{
+    text-transform: uppercase;
+    font-weight:400;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.skills .skill-section .softwares .software .level{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+}
+.skills .skill-section .softwares .software .adobe .filled{
+    background-color: #00c7fc;
+    height: 100%;
+    width: 90%;
+    position: relative;
+}
+.skills .skill-section .softwares .software .adobe .filled::before{
+    content: "90%";
+    text-align: center;
+    padding-top: 2px;
+    color: white;
+    background-color: black;
+    height: 23px;
+    width: 40px;
+    border-radius: 10%;
+    position: absolute;
+    top: -42px;
+    left:90%;
+    transform: translateX(50%);
+    z-index: 1;
+}
+.skills .skill-section .softwares .software .adobe .filled::after{
+    content: "";
+    color: white;
+    background-color: black;
+    height: 12px;
+    width: 12px;
+    border-radius: 10%;
+    position: absolute;
+    top: -25px;
+    left:89%;
+    transform: translateX(37px) rotate(45deg);
+}
+.skills .skill-section .softwares .software .adobe .empty{
+    background-color: #dedadc;
+    height: 100%;
+    width: 10%;
+}
+.skills .skill-section .softwares .software .html-css .filled{
+    background-color: #00c7fc;
+    height: 100%;
+    width: 85%;
+    position: relative;
+}.skills .skill-section .softwares .software .html-css .filled::before{
+    content: "85%";
+    text-align: center;
+    padding-top: 2px;
+    color: white;
+    background-color: black;
+    height: 23px;
+    width: 40px;
+    border-radius: 10%;
+    position: absolute;
+    top: -42px;
+    left:89%;
+    transform: translateX(50%);
+    z-index: 1;
+}
+.skills .skill-section .softwares .software .html-css .filled::after{
+    content: "";
+    color: white;
+    background-color: black;
+    height: 12px;
+    width: 12px;
+    border-radius: 10%;
+    position: absolute;
+    top: -25px;
+    left:88%;
+    transform: translateX(37px) rotate(45deg);
+}
+.skills .skill-section .softwares .software .html-css .empty{
+    background-color: #dedadc;
+    height: 100%;
+    width: 15%;
+}
+.skills .skill-section .softwares .software .javascript .filled{
+    background-color: #00c7fc;
+    height: 100%;
+    width: 80%;
+    position: relative;
+}.skills .skill-section .softwares .software .javascript .filled::before{
+    content: "80%";
+    text-align: center;
+    padding-top: 2px;
+    color: white;
+    background-color: black;
+    height: 23px;
+    width: 40px;
+    border-radius: 10%;
+    position: absolute;
+    top: -42px;
+    left:88%;
+    transform: translateX(50%);
+    z-index: 1;
+}
+.skills .skill-section .softwares .software .javascript .filled::after{
+    content: "";
+    color: white;
+    background-color: black;
+    height: 12px;
+    width: 12px;
+    border-radius: 10%;
+    position: absolute;
+    top: -25px;
+    left:87%;
+    transform: translateX(37px) rotate(45deg);
+}
+.skills .skill-section .softwares .software .javascript .empty{
+    background-color: #dedadc;
+    height: 100%;
+    width: 20%;
+}
+.skills .skill-section .softwares .software .php .filled{
+    background-color: #00c7fc;
+    height: 100%;
+    width: 90%;
+    position: relative;
+}.skills .skill-section .softwares .software .php .filled::before{
+    content: "90%";
+    text-align: center;
+    padding-top: 2px;
+    color: white;
+    background-color: black;
+    height: 23px;
+    width: 40px;
+    border-radius: 10%;
+    position: absolute;
+    top: -42px;
+    left:90%;
+    transform: translateX(50%);
+    z-index: 1;
+}
+.skills .skill-section .softwares .software .php .filled::after{
+    content: "";
+    color: white;
+    background-color: black;
+    height: 12px;
+    width: 12px;
+    border-radius: 10%;
+    position: absolute;
+    top: -25px;
+    left:89%;
+    transform: translateX(37px) rotate(45deg);
+}
+.skills .skill-section .softwares .software .php .empty{
+    background-color: #dedadc;
+    height: 100%;
+    width: 10%;
+}
 /* end skills */
+/* start qoute */
+.qoute{
+    background-image: url(../images/quote.jpg);
+    background-size: cover;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0px 125px;
+    text-align: center;
+}
+.qoute .overlay{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #00000099;
+    height: 100%;
+    width: 100%;
+}
+.qoute p{
+    color: white;
+    z-index: 1;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.qoute h4{
+    color: white;
+    z-index: 1;
+    text-transform:capitalize;
+    font-weight: 400;
+}
+/* end qoute */
+/* start pricing */
+.pricing{
+    margin-bottom: 40px;
+}
+.pricing .subscription{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+.pricing .subscription div{
+    padding-top: 20px;
+}
+.pricing .subscription > div{
+    width: 100%;
+    margin: 0px 15px;padding-top: 0px;
+    background-color: #fcfcfc;
+}
+.pricing .subscription div .price h4{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 19px;
+}
+.pricing .subscription div .price p{
+    font-size: 60px;
+    font-weight: 700;
+    padding-top: 15px;
+}
+.pricing .subscription div .price p span:first-child{
+    font-size: 25px;
+    font-weight: 400;
+    vertical-align: text-top;
+}
+.pricing .subscription div .price p span:last-child{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.pricing .subscription >div >div:first-child{
+    padding-bottom: 20px;
+}
+.pricing .subscription >div >div>div{
+    padding-bottom: 20px;
+}
+.pricing .subscription > div >div,.pricing .subscription .features .feature:not(:first-child){
+    border-top: var(--mainColor) solid 1px;
+}
+.pricing .subscription .features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pricing .subscription .features .feature{
+    text-transform: capitalize;
+    width: 50%;
+}
+.pricing .subscription .buy{
+    padding-top: 45px;
+    margin-bottom: 45px;
+}
+.pricing .subscription .buy a{
+    text-transform: capitalize;
+    text-decoration: none;
+    border: var(--mainColor) solid 1px;
+    padding: 15px;
 
+}
+/* end pricing */
+/* start modify-price */
+.modify-price{
+    text-align: center;
+    margin-bottom: 135px;
+}
+.modify-price p{
+    line-height: 90px;
+    font-size: 20px;
+}
+.modify-price a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    background-color: var(--mainColor);
+    padding: 14px 30px;
+}
+/* end modify-price */
+/* start subscribe */
+.subscribe{
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+.subscribe .overlay{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #00000050;
+    height: 100%;
+    width: 100%;
+}
+.subscribe .email-box{
+    z-index: 1;
+    border: white solid 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.subscribe .email-box i{
+    color: white;
+    font-size: 20px;
+    padding:0px 15px;
+}
+input{
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+}
+input::placeholder{
+    color: white;
+}
+.subscribe .email-box a{
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    background-color: var(--mainColor);
+}
+.subscribe p{
+    color: white;
+    z-index: 1;
+    width: 40%;
+    line-height: 30px;
+}
+/* end subscribe */
+/* start contact */
 
-
-
-
+.contact{
+    margin-bottom: 100px;
+}
+.contact .info{
+    display: flex;
+    flex-direction: row;
+}
+.contact .info .input-boxes{
+    width: 70%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.contact .info .input-boxes input{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    outline: #cccccc solid 1px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+.contact .info .input-boxes input::placeholder{
+    color: #757575;
+}
+.contact .info .input-boxes > input{
+    height: 60px;
+}
+.contact .info .input-boxes textarea{
+    width: 100%;
+    height: 200px;
+    outline: #cccccc solid 1px;
+    border: none;
+    margin-bottom: 45px;padding-top: 20px;
+    padding-left: 20px;
+}
+.contact .info .input-boxes a{
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: var(--mainColor);
+    color: white;
+    padding: 15px 20px;
+    align-self: flex-end;
+}
+.contact .info .address{
+    display: flex;
+    flex-direction: column;
+    width:30%
+}
+.contact .info .address div{
+    margin: 0px 25px 50px 50px;
+}
+.contact .info .address .get-in-touch{
+    display: flex;
+    flex-direction: column;
+}
+.contact .info .address div h3{
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.contact .info .address .where-we-are{
+    display: flex;
+    flex-direction: column;
+}
+.contact .info .address .where-we-are input{
+    font-style: italic;
+}
+.contact .info .address div input{
+    color: black;
+    margin-bottom: 20px;
+}
+.contact .info .address div input::placeholder{
+    color: #757575;
+}
+/* end contact */
+/* start footer */
+footer{
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    height: 58vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+footer .overlay{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #00000099;
+    height: 100%;
+    width: 100%;
+}
+footer .logo{
+    background-image: url(../images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 110px;
+    height: 40px;
+    z-index: 1;
+}
+footer h3{
+    text-transform: uppercase;
+    color: white;
+    border-bottom: white solid 1px;
+    font-weight: 400;
+    font-size: 22px;
+    padding: 20px;
+    z-index: 1;
+}
+footer .social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    margin-top: -30px;
+}
+footer .social i{
+    color: white;
+    padding: 0px 15px 15px 15px;
+}
+footer p{
+    text-transform: capitalize;
+    color: white;
+    z-index: 1;
+}
+footer p span{
+    color: var(--mainColor);
+    font-weight: bold;
+}
+/* end footer */
 
 /* start responsive */
 /* mobiles */
 @media (max-width: 767px) {
+    header .container nav .toggle-menu{
+        display: inline-block;
+    }
     header .container nav ul li a{
         display: none;
     }
@@ -625,15 +1224,64 @@ line-height: 50px;
     .portfolio .photos .img-box .alt{
         height: 30%;
     }
+    .about .img-box .img1{
+        transform: scale(0.4) translateY(80%);
+    }
+    .about .img-box .img2{
+        height: 130vh;
+    }
+    .about .img-box .img2 .overlay .stats{
+        flex-direction: column;
+    }
+    .skills{
+        flex-wrap: wrap;
+    }
+    .skills > div {
+        padding-left: 0px;
+    }
+    .qoute{
+        padding: 5px;
+    }
+    .skills .test-section .profile{
+        flex-direction: column;
+        text-align: center;
+    }
+    .skills .test-section .profile .img-box{
+       align-self: center;
+       width: 30%;
+    }
+    .pricing .subscription{
+        flex-wrap: wrap;
+    }
+    .pricing .subscription >div{
+        margin-bottom: 40px;
+    }
+    .subscribe{
+        flex-direction: column;
+    }
+    .subscribe p{
+        width: 80%;
+    }
+    .contact .info{
+        flex-direction: column;
+    }
+    .contact .info .input-boxes{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .contact .info .input-boxes a{
+        align-self: center;
+    }
+    .contact .info .address div h3,.contact .info .address div input{
+        width: 200px;
+    }
 }
 /* small screens */
 @media (min-width: 768px) and (max-width: 991px) {
     .container{
         width: 750px;
     }
-    header .container nav .toggle-menu{
-        display: none;
-    }
+
     .design .txt-container{
         width: 45%;
     }
@@ -646,7 +1294,22 @@ line-height: 50px;
         grid-template-rows: repeat(4, minmax(300px, 1fr));
         row-gap: 5px;
     }
-}
+    .about .img-box .img2{
+        height: 100vh;
+    }
+    .about .img-box .img2 .overlay .stats{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 40px;
+    }
+    .skills{
+        flex-wrap: wrap;
+    }
+    .skills .test-section .profile .img-box{
+        width: 20%;
+     }
+    }
 /* medium screens */
 @media (min-width: 992px) and (max-width: 1199px) {
     .container{
@@ -658,6 +1321,9 @@ line-height: 50px;
         grid-template-rows: repeat(4, minmax(300px, 1fr));
         row-gap: 5px;
     }
+    .skills > div > .title p{
+        width: 430px;
+    }
 }
 /* large screens */
 @media (min-width: 1200px) {
@@ -665,5 +1331,4 @@ line-height: 50px;
         width: 1170px;
     }
 }
-
 /* end responsive */
